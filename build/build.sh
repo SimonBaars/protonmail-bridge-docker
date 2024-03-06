@@ -2,12 +2,10 @@
 
 set -ex
 
-VERSION=`cat VERSION`
-
 # Clone new code
-git clone https://github.com/ProtonMail/proton-bridge.git
+git clone https://github.com/SimonBaars/proton-bridge.git
 cd proton-bridge
-git checkout v$VERSION
+git checkout "v3.8.2-no-auto-update"
 
 ARCH=$(uname -m)
 if [[ $ARCH == "armv7l" ]] ; then
